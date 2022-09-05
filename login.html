@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/Logo.png" />
+</head>
+<body onresize="onSizeChange()">
+    <div class="background"></div>
+    <div class="title-tab">
+        <span>
+            <img class="header-logo" src="images/Logo.png">
+        </span>
+        <span class="header-title">Learn English with Teacher Paula</span>
+        <span id="options" class="options" onclick="showHideMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#000000" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"></rect>
+                <line id="middle" x1="40" y1="128" x2="216" y2="128" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                <line id="top" x1="40" y1="64" x2="216" y2="64" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                <line id="bottom" x1="40" y1="192" x2="216" y2="192" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+            </svg>
+        </span>
+    </div>
+    <div class="menu-buttons">
+        <button id="menu-button-one" class="menu-button" onclick="document.getElementById('box-three').scrollIntoView({behavior: 'smooth'})">About Us</button>
+        <button class="menu-button" onclick="document.getElementById('box-one').scrollIntoView({behavior: 'smooth'})">Videos</button>
+        <button class="menu-button" onclick="document.getElementById('box').scrollIntoView({behavior: 'smooth'})">Gallery</button>
+        <button class="menu-button" onclick="document.getElementById('box-two').scrollIntoView({behavior: 'smooth'})">Free Material</button>
+        <button class="menu-button" onclick="document.getElementById('box-four').scrollIntoView({behavior: 'smooth'})">Contact Us</button>
+    </div>
+    <div id="container" class="container">
+        <div class="clipart">
+            <div id="imgContainer" class="image-container">
+                <img class="_image" src="images/image01.png" style="display: none;">
+                <img class="_image" src="images/image31.png" style="display: none;">
+                <img class="_image" src="images/image41.png" style="display: none;">
+                <img class="_image" src="images/image21.png">
+            </div>
+        </div>
+        <div class="book-now-container"    >
+            <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: large;text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.459);">
+                Book a class today!
+            </span><br>
+            <button class="book-button" onclick="location.href='booking'">Book Now</button><br>
+            <span id="free-trial-text" onclick="scrollToLogin()">
+                <strong>Or create a new account and get 2 free trial classes!</strong>
+            </span><br>
+        </div>
+        <div class="login-form">
+            <div class="login-panel">
+                <img class="logo" src="images/Logo.png">
+                <h1 id="login-form-title" style="color: rgb(88, 88, 88);margin-bottom: 5px;">Login</h1>
+                <div class="adminLoginTxt" onclick="window.location.href = 'AdminLogin.html'">Admin Login</div>
+                <input style="display: none;" type="text" id="name" placeholder="Full Name*">
+                <input type="text" id="username" placeholder="Email*">
+                <input style="display: none;" type="text" id="email" placeholder="someone@example.com*">
+                <div style="display: none;" class="phone-input" id="#phone-input">
+                    <input id="c-code" class="country-code" type="tel" maxlength="4" value="+63" bind:value=cc>
+                    <input id="phone" class="phone" type="tel" placeholder="987 654 3210*" maxlength="10">
+                </div>
+                <input type="password" id="password" placeholder="Password*">
+                <inpu type="checkbox"></inpu>
+                <label id="errorMsg" style="visibility: hidden; margin-left: 10px; width: 100%; font-size: smaller; color: red;">Please fill all the mandatory fields.</label>
+            </div>
+                <button id="login-signup-button" class="login-button" type="submit">Login</button>
+                <span id="signUpBtn" onclick="showSignUp()">Don't have an account?</span>
+                <span id="forgot-password-text">Forgot password?</span>
+        </div>
+    </div>
+    <div onclick="document.getElementById('box').scrollIntoView({behavior: 'smooth'})" id="box" class="gallary-container">
+        <div class="gallary-image-container">
+            <svg onclick="plusDivs(-1)" id="left-button" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#000000" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"></rect>
+                <polyline points="160 208 80 128 160 48" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+            </svg>
+            <svg onclick="plusDivs(+1)" id="right-button" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#000000" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none"></rect>
+                <polyline points="96 48 176 128 96 208" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+            </svg>
+            <img id="gallary-image" class="_gallary-image" style="width: 100%; display: none;" src="images/image01.png">
+            <img id="gallary-image" class="_gallary-image" style="width: 100%; display: none;" src="images/image21.png">
+            <img id="gallary-image" class="_gallary-image" style="width: 100%" src="images/image31.png">
+            <img id="gallary-image" class="_gallary-image" style="width: 100%; display: none;" src="images/image41.png">
+        </div>
+        <div class="image-description">"Learning a new language is not only expanding your knowledge but more of  building connections with people across the world through communication"<span style="text-align: right"><strong>-T. Mignon</strong></span></div>
+    </div>
+    <div onclick="document.getElementById('box-one').scrollIntoView({behavior: 'smooth'})" id="box-one" class="gallary-container">
+        <div class="video-play-container">
+            <video src="https://firebasestorage.googleapis.com/v0/b/teacher-mignon.appspot.com/o/video.mp4?alt=media&token=863fde60-ae18-4686-a0e0-cb5938b17665" height="480" width="853" controls controlsList="nodownload"></video>
+        </div>
+        <div class="image-description">Baby shark, baby shark!<span style="text-align: right"><strong>-T. Mignon</strong></div>
+    </div>
+    <div onclick="document.getElementById('box-two').scrollIntoView({behavior: 'smooth'})" id="box-two" class="gallary-container">
+        <div class="pdf-viewer">
+            <iframe class="pdf-viewer-box" frameborder="0"  width="400" height="300" src="https://84480864-trial.flowpaper.com/material1/#PreviewMode=Miniature" scrolling="no" marginwidth="0" marginheight="0" allowFullScreen></iframe>
+        </div>
+        <div class="image-description">Mommy shark, mommy shark!<span style="text-align: right"><strong>-T. Mignon</strong></div>
+    </div>
+    <div style="flex-direction: column;" onclick="document.getElementById('box-three').scrollIntoView({behavior: 'smooth'})" id="box-three" class="gallary-container">
+        <div class="about-us-text">Hello my dear students! I am Teacher Paula and I am here to cater my skills and love in teaching English to you all. For about 9 years till this day forward my journey in teaching young to advance learners was a fun and exciting journey. l, together with my partner put up this online classroom to reach out to you and share my passion in teaching the English language. So, Join me and let’s make a fun filled learning experience here in EC Hand (English Classroom for young Learners).</div>
+        <div class="cred-box">
+            <div class="cred-temp" id="cred-temp-one">
+                <div class="cred">
+                    <div class="cred-logo"><img style="width: 100%;" src="images/certificate-1356.svg"></div>
+                    <div class="cred-text">Graduated with bachelor’s degree in Arts and Communication</div>
+                </div>
+                <div class="cred">
+                    <a style="text-decoration: none; color: black;" href="https://img.51talk.com/tea_cert/2020/06/18/20200618054610635649.png" target="_blank">
+                    <div class="cred-logo"><img src="images/tsol.png" style="width: 100%;"></div>
+                    <div class="cred-text">TESOL & TYEL Certified teacher</div>
+                    </a>
+                </div>
+                <div class="cred">
+                    <div class="cred-logo" style="background: url('images/4+.svg'); background-repeat: no-repeat;"></div>
+                    <div class="cred-text">4 years’ experience in online teaching platforms</div>
+                </div>
+            </div>
+            <div class="cred-temp" id="cred-temp-one">
+                <div class="cred">
+                    <div class="cred-logo"  style="background: url('images/2+.svg'); background-repeat: no-repeat;"></div>
+                    <div class="cred-text">2 years’ experience in private primary school</div>
+                </div>
+                <div class="cred">
+                    <div class="cred-logo" style="background: url('images/1+.svg'); background-repeat: no-repeat;"></div>
+                    <div class="cred-text">1 year experience in an offline tutoring for foreign students</div>
+                </div>
+                <div class="cred">
+                    <div class="cred-logo" style="background: url('images/laptop.svg'); background-repeat: no-repeat;background-size: contain;"></div>
+                    <div class="cred-text">Well fit classroom setting for good learning experience</div>
+                </div>
+            </div>
+            <div class="cred-temp" id="cred-temp-two">
+                <div class="cred">
+                    <div class="cred-logo">
+                        <div class="cred-logo"><img src="images/ux.png" style="height: 100%;"></div>
+                    </div>
+                    <div class="cred-text">Intuitive and fun user experience</div>
+                </div>
+                <div class="cred">
+                    <div class="cred-logo">
+                        <div class="cred-logo"><img src="images/cs.png" style="height: 100%;"></div>
+                    </div>
+                    <div class="cred-text">Easily available customer support</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div onclick="document.getElementById('box-four').scrollIntoView({behavior: 'smooth'})" id="box-four" class="contact-info">
+        <div class="contact-div" style="color: #ffffff;">
+            <strong style="font-size: large;">Contacts</strong><br>
+            <b>Phone</b> <a class="link" href="tel:+639565405601">&nbsp;&nbsp;&nbsp;+63 9565405601</a><br>
+            <b>E-mail</b> <a class="link" href="mailto:calebpau1325@gmail.com" target="_blank">&nbsp;&nbsp;&nbsp;calebpau1325@gmail.com</a>
+        </div>
+        <div class="contact-div" id="social-links">
+            <a class="link" href="https://www.facebook.com/pau.lazaro.94" target="_blank">
+                <div style="display: flex;">
+                    <svg class="social" sty xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#FFFFFF" viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <circle cx="128" cy="128" r="96" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+                        <path d="M168,88H152a23.9,23.9,0,0,0-24,24V224" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+                        <line x1="96" y1="144" x2="160" y2="144" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    </svg>
+                    &nbsp;Facebook
+                </div>
+            </a>
+            <a class="link" href="https://www.instagram.com/pautsin07/" target="_blank">
+                <div style="display: flex;">
+                    <svg class="social" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#FFFFFF" viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <circle cx="128" cy="128" r="40" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" stroke-width="16"></circle>
+                        <rect x="36" y="36" width="184" height="184" rx="48" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect>
+                        <circle cx="180" cy="76" r="12"></circle></svg>
+                    &nbsp;Instagram
+                </div>
+            </a>
+            <a class="link" href="https://wa.me/+639565405601?text=" target="_blank">
+                <div style="display: flex;">
+                    <svg class="social" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#FFFFFF" viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <path d="M45.4,177A95.9,95.9,0,1,1,79,210.6h0L45.8,220a7.9,7.9,0,0,1-9.8-9.8L45.4,177Z" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+                        <path d="M152.1,184A79.9,79.9,0,0,1,72,103.9,28,28,0,0,1,100,76h0a6.8,6.8,0,0,1,6,3.5l11.7,20.4a8.1,8.1,0,0,1-.1,8.1l-9.4,15.7h0a48,48,0,0,0,24.1,24.1h0l15.7-9.4a8.1,8.1,0,0,1,8.1-.1L176.5,150a6.8,6.8,0,0,1,3.5,6h0A28.1,28.1,0,0,1,152.1,184Z" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+                    </svg>
+                    &nbsp;WhatsApp
+                </div>
+            </a>
+            <a class="link" href="skype:live:5f4325c477dda52b?chat" target="_blank">
+                <div style="display: flex;">
+                    <svg class="skype" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" height="22" width="22" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <g>
+                            <path d="M488.3,298.2c2.4-12.7,3.8-27.3,3.8-42.2v0V256c0-130.4-105.7-236.1-236.1-236.1H256c-15,0-29.5,1.4-43.7,4l1.5-0.2   C192.3,8.9,165.8,0,137.3,0H137h0C61.4,0.1,0.1,61.4,0,137v0.3c0,28.6,8.8,55.1,23.9,76.9l-0.3-0.5c-2.4,12.7-3.8,27.3-3.8,42.2v0   v0.1c0,130.4,105.7,236.1,236.1,236.1h0.1c15,0,29.5-1.4,43.7-4l-1.5,0.2c21.4,14.8,47.9,23.6,76.5,23.6h0.3h0   c75.6-0.1,136.9-61.4,137-137v-0.3c0-28.6-8.8-55.1-23.9-76.9L488.3,298.2L488.3,298.2z M374.9,475.9L374.9,475.9   c-23.3,0-44.7-7.9-61.7-21.2l0.2,0.2l-6.6-5.1l-8.1,1.7c-12.8,2.8-27.6,4.5-42.7,4.6h0c-110.3,0-200-89.7-200-200   c0.1-15.2,1.7-30,4.8-44.2l-0.3,1.4l1.7-8.1l-5.1-6.6c-13.1-16.8-21-38.3-21-61.6c0-55.6,45.1-100.8,100.8-100.8   c23.3,0,44.8,7.9,61.9,21.2l-0.2-0.2l6.6,5.1l8.1-1.7C226,57.7,240.8,56,256,56h0c110.3,0,200,89.7,200,200   c-0.1,15.2-1.7,30-4.8,44.2l0.3-1.4l-1.7,8.1l5.1,6.6c13.1,16.8,21,38.3,21,61.6c0,55.6-45.1,100.8-100.8,100.8H374.9L374.9,475.9z   " fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                            <path d="M283.7,226.8l-30.6-7.1c-22.3-5.3-39.1-9.1-39.1-26.2c0-15.6,16.5-22.6,42.4-22.6c46.2,0,47.1,33.8,75.6,33.8   c19.1,0,30.6-15,30.6-32c0-33.8-56.2-55.9-111.7-55.9c-50.9,0-110,22.1-110,81.7c0,49.4,32.9,67.1,75.9,77.3l42.9,10.6   c26.2,6.5,42.4,9.4,42.4,28.2c0,15-16.8,26.5-42.6,26.5c-54.4,0-57.4-45.3-88.8-45.3c-20.6,0-29.7,14.7-29.7,30.9   c0,36.2,55.3,65.6,121.5,65.6c55.3,0,112.9-27.6,112.9-87.4C375.2,253.9,325.5,236.2,283.7,226.8L283.7,226.8z"  fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"/>
+                        </g>
+                        </svg>
+                    &nbsp;Skype
+                </div>
+            </a>
+        </div>
+        <div class="contact-div" style="color: white">
+            <span class="link">Privacy policy</span><br>
+            <span class="link">Terms and Conditions</span>
+        </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/bundle.js"></script>
+</body>
+</html>

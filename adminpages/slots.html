@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slots</title>
+    <style>
+        @import url(../styles/loading.css);
+        body{
+            margin: 0px;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        th{
+            position: sticky;
+            top: 0;
+            background-color: white;
+        }
+        td,th{
+            text-align: center;
+            font-size: 12px;
+        }
+        td{
+            height: 35px;
+            width: 120px;
+            background-color: rgb(255, 255, 184);
+            user-select: none;
+            
+        }
+        td:hover{
+            cursor: pointer;
+        }
+        .slots-table-holder::-webkit-scrollbar{
+            height: 10px;
+            width: 15px;
+            background-color: transparent;
+        }
+        .slots-table-holder::-webkit-scrollbar-thumb{
+            background-color: gray;
+            border-radius: 10px;
+        }
+        .slots-table-holder::-webkit-scrollbar-track{
+            background-color: gainsboro;
+            border-radius: 10px;
+        }
+        #saveBtn{
+            height: 40px;
+            width: 100px;
+            margin: auto;
+            border-radius: 5px;
+            background-color: greenyellow;
+            font-weight: 700;
+            border: none;
+        }
+        #saveBtn:hover{
+            cursor: pointer;
+            background-color: rgb(60, 211, 0);
+        }
+        #next-button:hover{
+            cursor: pointer;
+            fill: #222222;
+        }
+        #previous-button:hover{
+            cursor: pointer;
+            fill: #222222;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-page" style="position: fixed;">
+        
+        <h1>Loading
+            <div class="dots">
+                <span class="dot z"></span>
+                <span class="dot f"></span>
+                <span class="dot s"></span>
+                <span class="dot t">
+                    <span class="dot l"></span>
+                </span>
+            </div>
+        </h1>
+
+    </div>
+
+    <div class="slots-table-holder" style="overflow: auto; height: 75vh; border: 1px solid black; border-radius: 10px;">
+        <table id="slots">
+            <tr><th>Day 1</th><th>Day 2</th><th>Day 3</th><th>Day 4</th><th>Day 5</th><th>Day 6</th><th>Day 7</th></tr>
+        </table>
+    </div>
+    <div style="display: flex; justify-content: space-between; margin-top: 20px; width: 850px; height: 100px;">
+        <svg id="previous-button" style="margin-top: auto; margin-bottom:auto" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="#444444" viewBox="0 0 256 256">
+            <rect width="256" height="256" fill="none"></rect>
+            <path d="M163.1,40.6a8.4,8.4,0,0,0-8.8,1.7l-80,80a8.1,8.1,0,0,0,0,11.4l80,80A8.3,8.3,0,0,0,160,216a8.5,8.5,0,0,0,3.1-.6A8,8,0,0,0,168,208V48A8,8,0,0,0,163.1,40.6Z"></path>
+        </svg>
+        <button id="saveBtn">Save</button>
+        <svg id="next-button" style="margin-top: auto; margin-bottom:auto" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="#444444" viewBox="0 0 256 256">
+            <rect width="256" height="256" fill="none"></rect>
+            <path d="M181.7,122.3l-80-80a8.4,8.4,0,0,0-8.8-1.7A8,8,0,0,0,88,48V208a8,8,0,0,0,4.9,7.4,8.5,8.5,0,0,0,3.1.6,8.3,8.3,0,0,0,5.7-2.3l80-80A8.1,8.1,0,0,0,181.7,122.3Z"></path>
+        </svg>
+    </div>
+    <script type="module" src="scripts/admin_slots.js"></script>
+</body>
+</html>

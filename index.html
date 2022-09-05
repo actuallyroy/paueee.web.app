@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/home_style.css">
+    <link rel="stylesheet" href="styles/loading.css">
+</head>
+<body>
+
+    <div class="loading-page" style="position: fixed;">
+        
+        <h1>Loading
+            <div class="dots">
+                <span class="dot z"></span>
+                <span class="dot f"></span>
+                <span class="dot s"></span>
+                <span class="dot t">
+                    <span class="dot l"></span>
+                </span>
+            </div>
+        </h1>
+
+    </div>
+    
+    <div class="no-int-container" style="z-index: 3;">
+        <div id="no-internet-page" style="height: 100vh; width: 100vw; background-color: white; z-index: 3; display: flex; flex-direction: column;">
+            <div class="no-internet-logo" style="margin: auto; margin-bottom: 20px;">
+                <img src="images/network-signal.png" height="200" width="200">
+            </div>
+            <div style="margin: auto; margin-top: 20px; font-size: larger;">Check your internet connection</div>
+        </div>
+    </div>
+
+    <div class="header-bar">
+        <div class="logo"></div>
+        <div class="header-title"><b>Dashboard</b></div>
+        <div class="logout-button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#ff0000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="174 86 216 128 174 170" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline><line x1="104" y1="128" x2="216" y2="128" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line><path d="M104,216H48a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8h56" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path></svg>
+        </div>
+    </div>
+    <div class="left-menu">
+        <div id="home-button" title="Dashboard" class="menu-icons" style="background-color: #d1ffd1; border-radius: 10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#00b12f" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M152,208V160a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v48a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V115.5a8.3,8.3,0,0,1,2.6-5.9l80-72.7a8,8,0,0,1,10.8,0l80,72.7a8.3,8.3,0,0,1,2.6,5.9V208a8,8,0,0,1-8,8H160A8,8,0,0,1,152,208Z" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg>
+        </div>
+        <div id="settings-button" title="Profile" onclick="window.location.href = 'profile.html'" class="menu-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#00b12f" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="48" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><path d="M197.4,80.7a73.6,73.6,0,0,1,6.3,10.9L229.6,106a102,102,0,0,1,.1,44l-26,14.4a73.6,73.6,0,0,1-6.3,10.9l.5,29.7a104,104,0,0,1-38.1,22.1l-25.5-15.3a88.3,88.3,0,0,1-12.6,0L96.3,227a102.6,102.6,0,0,1-38.2-22l.5-29.6a80.1,80.1,0,0,1-6.3-11L26.4,150a102,102,0,0,1-.1-44l26-14.4a73.6,73.6,0,0,1,6.3-10.9L58.1,51A104,104,0,0,1,96.2,28.9l25.5,15.3a88.3,88.3,0,0,1,12.6,0L159.7,29a102.6,102.6,0,0,1,38.2,22Z" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg>
+        </div>
+        <div id="stats-button" title="Progress" class="menu-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#00b12f" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="44 208 44 136 100 136" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline><line x1="228" y1="208" x2="28" y2="208" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><polyline points="100 208 100 88 156 88" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline><rect x="156" y="40" width="56" height="168" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect></svg>
+        </div>
+        <div id="classroom-button" title="Classroom" class="menu-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#00b12f" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="104" cy="144" r="32" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><path d="M53.4,208a56,56,0,0,1,101.2,0H216a8,8,0,0,0,8-8V56a8,8,0,0,0-8-8H40a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8Z" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><polyline points="176 176 192 176 192 80 64 80 64 96" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
+        </div>
+        <div id="mat-button" title="Materials" class="menu-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#00b12f" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><rect x="40" y="40" width="48" height="176" rx="8" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect><line x1="40" y1="80" x2="88" y2="80" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><rect x="88" y="40" width="48" height="176" rx="8" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect><line x1="88" y1="176" x2="136" y2="176" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><rect x="158" y="38.6" width="48" height="176" rx="8" transform="matrix(0.97, -0.26, 0.26, 0.97, -26.56, 51.42)" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect><line x1="171.2" y1="179.2" x2="217.6" y2="166.7" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="146.4" y1="86.4" x2="192.8" y2="74" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line></svg>
+        </div>
+        <div id="help-button" title="Help" class="menu-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#00b12f" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><circle cx="128" cy="180" r="12"></circle><path d="M128,144v-8a28,28,0,1,0-28-28" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left-panel">
+            <div class="user-info" title="Profile">
+                    <img class="profile-pic" id="dp" src="/src/images/default.png">
+                <div class="name-box">
+                    <div class="name"><b id="name">Name</b></div>
+                    <div class="level"><b>Level</b><span id="level">: Beginner</span></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="take-text-button" class="bbutton">Take a test</button>
+                <button id="book-class-button" class="bbutton">Book a class</button>
+            </div>
+            <div class="upcoming-classes-container">
+                <div style="font-size: 27px; margin-left: 25px; color: #4E4E4E;"><b>Upcoming Classes</b></div>
+                <div class="upcoming-classes"></div>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div style="margin: 15px; font-size: 25px;"><b>Stats</b></div>
+            <div class="progress-bar-box">
+                <div>Vocabulary</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar" id="pbar0"></div>
+                </div>
+                <div id="pbarn0" style="width: 300px; text-align: right;">100/150</div>
+            </div>
+            <div class="progress-bar-box">
+                <div>Sentence Pattern</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar" id="pbar1"></div>
+                </div>
+                <div id="pbarn1" style="width: 300px; text-align: right;">100/150</div>
+            </div>
+            <div class="progress-bar-box">
+                <div>Lessons Finished</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar" id="pbar2"></div>
+                </div>
+                <div id="pbarn2" style="width: 300px; text-align: right;">100/150</div>
+            </div>
+            <div class="improvement-box">
+                <div>Improvement</div>
+                <div class="improvement-meter-box">
+                    <div class="improvement-meter">
+                        <div class="meter"></div>
+                        <div class="pointer" id="pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="58" viewBox="0 0 53 58">
+                                <defs>
+                                  <filter id="Polygon_1" x="0" y="0" width="53" height="58" filterUnits="userSpaceOnUse">
+                                    <feOffset dy="3" input="SourceAlpha"/>
+                                    <feGaussianBlur stdDeviation="3" result="blur"/>
+                                    <feFlood flood-opacity="0.161"/>
+                                    <feComposite operator="in" in2="blur"/>
+                                    <feComposite in="SourceGraphic"/>
+                                  </filter>
+                                </defs>
+                                <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Polygon_1)">
+                                  <g id="Polygon_1-2" data-name="Polygon 1" transform="translate(9 46) rotate(-90)" fill="#00d881">
+                                    <path d="M 34.83046340942383 33.99999618530273 L 5.169541835784912 33.99999618530273 C 4.448361873626709 33.99999618530273 3.80170202255249 33.62760543823242 3.439721822738647 33.00385665893555 C 3.077741861343384 32.38009643554688 3.075251817703247 31.63388633728027 3.433051824569702 31.00772476196289 L 18.26351165771484 5.054415702819824 C 18.62409210205078 4.423415660858154 19.27324104309082 4.046695709228516 20.00000190734863 4.046695709228516 C 20.72675132751465 4.046695709228516 21.37590217590332 4.423415660858154 21.73648262023926 5.054415702819824 L 36.56695175170898 31.00772476196289 C 36.92475128173828 31.63388633728027 36.92226028442383 32.38009643554688 36.56028366088867 33.00385665893555 C 36.19830322265625 33.62760543823242 35.55164337158203 33.99999618530273 34.83046340942383 33.99999618530273 Z" stroke="none"/>
+                                    <path d="M 19.99999237060547 5.046695709228516 C 19.82551193237305 5.046695709228516 19.39162254333496 5.095794677734375 19.13176155090332 5.550556182861328 L 4.301300048828125 31.50386619567871 C 4.043430328369141 31.95513534545898 4.217720031738281 32.35216522216797 4.304630279541016 32.50192642211914 C 4.391532897949219 32.65167617797852 4.6497802734375 32.99999618530273 5.169540405273438 32.99999618530273 L 34.83046340942383 32.99999618530273 C 35.35021209716797 32.99999618530273 35.60846328735352 32.65167617797852 35.69537353515625 32.50192642211914 C 35.78227996826172 32.35216522216797 35.95657348632812 31.95513534545898 35.69869995117188 31.50386619567871 L 20.86823272705078 5.550556182861328 C 20.60837173461914 5.095794677734375 20.17448234558105 5.046695709228516 19.99999237060547 5.046695709228516 M 19.99999618530273 3.046695709228516 C 21.01443862915039 3.046695709228516 22.02888107299805 3.550556182861328 22.60472106933594 4.558277130126953 L 37.4351921081543 30.5115852355957 C 38.57803344726562 32.51155471801758 37.1339225769043 34.99999618530273 34.83046340942383 34.99999618530273 L 5.169540405273438 34.99999618530273 C 2.866073608398438 34.99999618530273 1.421970367431641 32.51155471801758 2.564811706542969 30.5115852355957 L 17.39527130126953 4.558277130126953 C 17.97111129760742 3.550556182861328 18.98555374145508 3.046695709228516 19.99999618530273 3.046695709228516 Z" stroke="none" fill="#008523"/>
+                                  </g>
+                                </g>
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="remark"><h1><span id="remark">Very Good</span></h1></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/index.js" type="module"></script>
+</body>
+</html>

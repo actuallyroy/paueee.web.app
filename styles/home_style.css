@@ -1,0 +1,302 @@
+:root{
+    --header-height: 75px;
+}
+body{
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.no-int-container{
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1400px;
+    height: 100vh;
+}
+
+.header-bar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: var(--header-height);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.16);
+}
+.logo{
+    height: 60px;
+    width: 60px;
+    margin: 7px 7px 7px 8px;
+    background-image: url('../images/Logo.png');
+    background-size: contain;
+}
+.header-title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    padding-left: 5px;
+    border-left: 2px solid rgb(112, 112, 112);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.16);;
+}
+.logout-button{
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.logout-button:hover{
+    cursor: pointer;
+}
+.left-menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 400px;
+    top: calc(50vh - 200px);
+    width: 65px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: white;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.16);
+    
+}
+.left-menu:hover{
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.39);
+}
+.menu-icons{
+    height: 50px;
+    width: 50px;
+    margin: auto;
+}
+.menu-icons:hover{
+    cursor: pointer;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+}
+.container{
+    width: 1400px;
+    display: flex;
+    margin: auto
+}
+.left-panel{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    margin-left: 70px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.16);;
+}
+.user-info{
+    height: 130px;
+    margin: 20px;
+    display: flex;
+}
+.profile-pic{
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+    box-shadow: 0px 0px 18px rgb(0 0 0 / 16%);
+    border-radius: 40px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.profile-pic:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.39);
+}
+.name-box{
+    height: 80px;
+    margin: 10px;
+    display: flex;
+    color: #4E4E4E;
+    flex-direction: column;
+    justify-content: center;
+}
+.name{
+    font-size: 30px;
+}
+.level{
+    font-size: 20px;
+}
+.buttons{
+    position: absolute;
+    display: flex;
+    top: 120px;
+    left: 580px;
+    height: 80px;
+    width: 380px;
+}
+.bbutton{
+    height: 60px;
+    margin: auto;
+    width: 160px;
+    color: white;
+    font-size: large;
+    border: none;
+    box-shadow: 4px 4px 8px rgb(0 0 0 / 16%);
+    background-color: #008523;
+    border-radius: 5px;
+}
+.bbutton:hover{
+    cursor: pointer;
+    background-color: #00611a;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.39);
+}
+.upcoming-classes-container{
+    height: 400px;
+}
+.upcoming-classes{
+    overflow: auto;
+    height: 380px;
+    margin: 10px 40px 10px 30px;
+    border-radius: 25px;
+    border: 5px solid #008523;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.16);
+}
+.right-panel{    
+    width: 340px;
+    height: 560px;
+    border-radius: 50px;
+    border: 8px solid #008523;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.16);
+    margin: 25px 40px 25px 40px;
+    color: #4E4E4E;
+}
+.progress-bar-box{
+    margin-left: 20px;
+}
+.progress-bar-bg{
+    width: 300px;
+    height: 23px;
+    margin-top: 10px;
+    border-radius: 12px;
+    box-shadow: inset 4px 4px 8px rgb(0 0 0 / 16%);
+    background-color: #D3D3D3;
+    overflow: hidden;
+
+}
+.progress-bar{
+    background-color: #008523;
+    width: 50px;
+    height: 23px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 8px rgb(0 0 0 / 16%);
+}
+.improvement-box{
+    height: 300px;
+    width: 355px;
+    margin-left: 20px;
+}
+.improvement-meter-box{
+    display: flex;
+    height: 250px;
+    width: 300px;
+    margin:auto;
+    align-items: center;
+}
+.improvement-meter{
+    width: 40px;
+    display: flex;
+}
+.meter{
+    height: 200px;
+    width: 20px;
+    border-radius: 10px;
+    background: rgb(0,255,0);
+    background: linear-gradient(180deg, rgba(0,255,0,1) 0%, rgba(255,255,0,1) 50%, rgba(255,0,0,1) 100%);
+}
+.pointer{
+    position: relative;
+    top: 31px;
+    height: 50px;
+    margin: -17px;
+    z-index: 1;
+}
+.remark{
+    margin: 20px;
+    text-align: center;
+}
+#remark{
+    font-size: 25px;
+}
+@media (max-width: 1400px) {
+    .header-bar{
+        width: 1400px;
+    }
+}
+@media (max-width: 600px) {
+    .header-bar{
+        width: 100vw;
+    }
+    .container{
+        width: 100vw;
+        height: calc(100vh - 75px);
+        flex-direction: column;
+        overflow: auto;
+    }
+    .buttons{
+        top: 150px;
+        left: calc(95vw - 100px);
+        width: auto;
+        height: 122px;
+        flex-direction: column;
+    }
+    .bbutton{
+        width: 100px;
+        height: 50px;
+    }
+    #take-text-button{
+        display: none;
+    }
+    .left-panel{
+        margin: auto;
+        margin-top: 0px;    
+        margin-bottom: 0px;
+    }
+    .upcoming-classes{
+        height: 50vh;
+    }
+    .right-panel{
+        display: none;
+    }
+    .left-menu{
+        flex-direction: row;
+        height: 84px;
+        width: 100vw;
+        top: auto;
+        padding: 0px;
+        bottom: 0px;
+        border-bottom-right-radius: 0px;
+        border-top-left-radius: 40px;
+        box-shadow: -5px 0px 8px rgb(0 0 0 / 16%);
+    }
+    .menu-icons{
+        height: 50px;
+        width: 50px;
+    }
+    .left-panel{
+        width: 100vw;
+    }
+    .profile-pic{
+        height: 80px;
+        width: 80px;
+    }
+    .name{
+        font-size: 25px;
+    }
+    .level{
+        font-size: 20px;
+    }
+    .name-box{
+        height: 60px;
+        margin: auto;
+        margin-left: 10px;
+    }
+    .user-info{
+        height: 100px;
+    }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles/profile_style.css">
+    <link rel="stylesheet", href="styles/loading.css">
+</head>
+<body>
+
+    <div class="loading-page" style="position: fixed;">
+        
+        <h1>Loading
+            <div class="dots">
+                <span class="dot z"></span>
+                <span class="dot f"></span>
+                <span class="dot s"></span>
+                <span class="dot t">
+                    <span class="dot l"></span>
+                </span>
+            </div>
+        </h1>
+
+    </div>
+
+    <div class="verify-phone-popup">
+        <div style="display: flex; flex-direction: column; background-color: white; padding: 30px; border-radius: 15px; box-shadow: 4px 4px 8px rgb(0, 0, 0, 16%);">
+            <div class="small-field-box-for-verification">
+                <span class="label">Phone</span>
+                <input type="tel" id="phone-for-verification" placeholder="+63 012 345 6789">
+            </div>
+            <button id="send-otp-button" class="verify-button">Send OTP</button>
+            <div class="small-field-box-for-verification">
+                <span class="label">OTP</span>
+                <input type="text" maxlength="6" id="otp-for-verification" placeholder="123456">
+            </div>
+            <button id="submit-otp-button" class="verify-button">Submit OTP</button>
+            <label id="errorMsg" style="visibility: hidden; margin-left: 10px; margin-top: 20px; width: 100%; font-size: smaller; color: red;">Please fill all the mandatory fields.</label>
+        </div>
+    </div>
+
+    <div class="header-bar">
+        <div class="logo"></div>
+        <div class="header-title"><b>Profile</b></div>
+        <div class="logout-button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#ff0000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="174 86 216 128 174 170" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline><line x1="104" y1="128" x2="216" y2="128" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line><path d="M104,216H48a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8h56" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path></svg>
+        </div>
+    </div>
+    <div class="left-menu">
+        <div id="home-button" onclick="window.location.href = 'index.html'" class="menu-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#00b12f" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M152,208V160a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v48a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V115.5a8.3,8.3,0,0,1,2.6-5.9l80-72.7a8,8,0,0,1,10.8,0l80,72.7a8.3,8.3,0,0,1,2.6,5.9V208a8,8,0,0,1-8,8H160A8,8,0,0,1,152,208Z" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg>
+        </div>
+        <div id="settings-button" class="menu-icons" style="background-color: #d1ffd1; border-radius: 10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#00b12f" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="48" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><path d="M197.4,80.7a73.6,73.6,0,0,1,6.3,10.9L229.6,106a102,102,0,0,1,.1,44l-26,14.4a73.6,73.6,0,0,1-6.3,10.9l.5,29.7a104,104,0,0,1-38.1,22.1l-25.5-15.3a88.3,88.3,0,0,1-12.6,0L96.3,227a102.6,102.6,0,0,1-38.2-22l.5-29.6a80.1,80.1,0,0,1-6.3-11L26.4,150a102,102,0,0,1-.1-44l26-14.4a73.6,73.6,0,0,1,6.3-10.9L58.1,51A104,104,0,0,1,96.2,28.9l25.5,15.3a88.3,88.3,0,0,1,12.6,0L159.7,29a102.6,102.6,0,0,1,38.2,22Z" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg>
+        </div>
+        <div id="stats-button" class="menu-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#00b12f" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="44 208 44 136 100 136" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline><line x1="228" y1="208" x2="28" y2="208" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><polyline points="100 208 100 88 156 88" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline><rect x="156" y="40" width="56" height="168" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect></svg>
+        </div>
+        <div id="classroom-button" class="menu-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#00b12f" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="104" cy="144" r="32" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><path d="M53.4,208a56,56,0,0,1,101.2,0H216a8,8,0,0,0,8-8V56a8,8,0,0,0-8-8H40a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8Z" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><polyline points="176 176 192 176 192 80 64 80 64 96" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
+        </div>
+        <div id="mat-button" class="menu-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#00b12f" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><rect x="40" y="40" width="48" height="176" rx="8" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect><line x1="40" y1="80" x2="88" y2="80" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><rect x="88" y="40" width="48" height="176" rx="8" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect><line x1="88" y1="176" x2="136" y2="176" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><rect x="158" y="38.6" width="48" height="176" rx="8" transform="matrix(0.97, -0.26, 0.26, 0.97, -26.56, 51.42)" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect><line x1="171.2" y1="179.2" x2="217.6" y2="166.7" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="146.4" y1="86.4" x2="192.8" y2="74" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line></svg>
+        </div>
+        <div id="help-button" class="menu-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#00b12f" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><circle cx="128" cy="180" r="12"></circle><path d="M128,144v-8a28,28,0,1,0-28-28" fill="none" stroke="#00b12f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg>
+        </div>
+    </div>
+    <div class="body-container">
+        <div class="container" style="overflow: auto;">
+            <div>
+                <img id="profile-pic" class="profile-pic" src="/src/images/default.png">
+                <label for="file-upload">
+                <input id="file-upload" style="display: none;" class="choose-pic-button" type='file'accept="image/png, image/jpeg"/>
+                <div id="change-profile-pic-button" class="change-profile-pic-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 92 92">
+                        <defs>
+                        <filter id="Ellipse_5" x="0" y="0" width="92" height="92" filterUnits="userSpaceOnUse">
+                            <feOffset dx="3" dy="3" input="SourceAlpha"/>
+                            <feGaussianBlur stdDeviation="4" result="blur"/>
+                            <feFlood flood-opacity="0.459"/>
+                            <feComposite operator="in" in2="blur"/>
+                            <feComposite in="SourceGraphic"/>
+                        </filter>
+                        </defs>
+                        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_5)">
+                        <circle id="Ellipse_5-2" data-name="Ellipse 5" cx="34" cy="34" r="34" transform="translate(9 9)" fill="#00b12f"/>
+                        </g>
+                        <path id="Path_11" data-name="Path 11" d="M-1.1,0H33.567V9H-1.1L-5.688,4.653Z" transform="translate(29.961 49.675) rotate(-45)" fill="#fff"/>
+                    </svg>                  
+                </div>
+                </label>
+            </div>
+            <div class="small-fields">
+                <div class="small-field-box">
+                    <span class="label">First Name</span>
+                    <input type="text" id="first-name" placeholder="John">
+                </div>
+                <div class="small-field-box">
+                    <span class="label">Last Name</span>
+                    <input type="text" id="last-name" placeholder="Doe">
+                </div>
+            </div>
+            <div class="contact-fields">
+                <div class="large-field-box">
+                    <span class="label">E-mail</span>
+                    <input type="text" id="email" placeholder="someone@example.com">
+                </div>
+                <button id="verify-email-button" class="verify-button">Verify</button>
+            </div>
+            <div class="contact-fields">
+                <div class="large-field-box">
+                    <span class="label">Phone</span>
+                    <input type="text" id="phone" placeholder="+63 012 345 6789">
+                </div>
+                <button id="verify-phone-button" class="verify-button">Verify</button>
+            </div>
+            <div class="large-field-box">
+                <span class="label">Location</span>
+                <input type="text" id="location" placeholder="e.g. New York, USA">
+            </div>
+            <div class="buttons-container">
+                <button id="cancel-button" onclick="window.location.href = 'index.html'">Cancel</button>
+                <button id="save-button">Save</button>
+            </div>
+        </div>
+        <div class="rel-settings">
+            <h2>
+            <span>More Settings</span>
+            </h2>
+            <li>
+                <span id="change-pass-button" class="more-buttons">Change password</span><br>
+            </li>
+            <li>
+                <span id="change-pass-button" class="more-buttons">Delete account</span>
+            </li>
+        </div>
+    </div>
+    <script src="scripts/profile.js" type="module"></script>
+</body>
+</html>

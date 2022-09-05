@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body{
+            margin: 0px;
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .admin-login-panel{
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input{
+            height: 35px;
+            width: 300px;
+            padding-left: 10px;
+            margin: 5px;
+            font-size: large;
+        }
+        button{
+            margin-top: 20px;
+            height: 50px;
+            width: 130px;
+            border: none;
+            font-size: large;
+            border-radius: 10px;
+            color: white;
+            background-color: #2937ff;
+            box-shadow: 1px 1px 4px rgb(46 46 46 / 51%);
+            -webkit-tap-highlight-color: transparent;
+        }
+        button:hover{
+            background-color: #000d80;
+            cursor: pointer;
+        }
+        .forgot-password-text{
+            margin-top: 50px;
+            color: red;
+        }
+        .forgot-password-text:hover{
+            cursor: pointer;
+        }
+        .errorMsg{
+            visibility: hidden;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-login-panel">
+        <div style="font-size: 50px; margin-bottom: 50px;">Welcome back Teacher Paula!</div>
+        <input id="emailField" type="email" placeholder="Email">
+        <input id="passwordField" type="password" placeholder="Password">
+        <div id="errorMsg" class="errorMsg">Something went wrong.</div>
+        <button id="loginBtn">Login</button>
+        <div id="forgotPassTxt" class="forgot-password-text">Forgot password?</div>
+    </div>
+    <script type="module" src="scripts/admin_login.js"></script>
+</body>
+</html>

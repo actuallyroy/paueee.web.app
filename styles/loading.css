@@ -1,0 +1,89 @@
+.loading-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dots {
+    display: inline-flex;
+}
+
+.dots--animate .dot.z {
+    animation: scale .8s .2s forwards;
+}
+
+.dots--animate .dot.f,
+.dots--animate .dot.s {
+    animation: right 0.5s forwards;
+}
+
+.dots--animate .dot.l {
+    animation: rightDown .4s .1s forwards linear, drop 2s .4s forwards linear;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: hsl(0, 0%, 13%);
+    border-radius: 10px;
+    position: relative;
+    margin-left: 6px;
+}
+
+.dot.z {
+    position: absolute;
+    transform: scale(0);
+}
+
+.dot.f,
+.dot.s {
+    transform: translateX(0px);
+}
+
+.dot.t {
+    background: transparent;
+}
+
+.l {
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes right {
+    100% {
+        transform: translateX(16px);
+    }
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rightDown {
+
+    50% {
+        top: 4px;
+        left: 16px;
+    }
+
+    100% {
+        top: 12px;
+        left: 24px;
+    }
+}
+
+@keyframes drop {
+    100% {
+        transform: translate(70px, calc(35px + (100vh/2)));
+    }
+}

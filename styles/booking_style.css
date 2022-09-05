@@ -1,0 +1,258 @@
+:root{
+    --table-height:  60vh;
+    --tale-width: 60vw;
+    --table-border-radius: 25px;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+  }
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#header{
+    width: 100vw;
+    border-radius: 5px;
+    background-color: #00687ad0;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.322);
+    backdrop-filter: blur(4px);
+}
+#header:hover{
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.288);
+}
+#header-title{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    font-size: 5vh;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.63);
+    padding-left: 40px;
+}
+#container{
+    display: flex;
+    margin-left: 40px;
+    user-select: none;
+}
+.choose-timing-text{
+    margin-top: 10px;
+    font-size: 35px;
+    color: #03A187;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.11);
+}
+.timeslot-box{
+    width: 920px;
+    height: var(--table-height);
+    margin-top: 20px;
+    border-top-left-radius: var(--table-border-radius);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.288);
+    padding: 0px;
+    background-color: white;
+}
+.timeslot-box:hover{
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.288);
+}
+
+.time-slot-title{
+    width: 100%;
+    height: 50px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: #d6ffd6;
+}
+.slot-div{
+    height: 40px;
+    width: 100px;
+    border-radius: 25px;
+    color: black;
+    background-color: #E7FFE2;
+    border: 5px solid #00FF55;
+    display: flex;
+    margin: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1EB000;
+}
+.slot-div:hover{
+    cursor: pointer;
+}
+.slot-day{
+    font-family: "Montserrat";
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.time-slot-table{
+    width: 850px;
+    font-size: medium;
+}
+.date-button{
+    opacity: 0.5;
+}
+
+.date-button:hover{
+    cursor: pointer;
+    opacity: 1;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.397));
+}
+.slot-box{
+    display: flex;
+    justify-content: center;
+    height: calc(100% - 50px);
+    width: 100%;
+    overflow: auto;
+}
+.slot-box::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+}
+.slot-box::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+.slot-box::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 15px;
+}
+
+.slots-box{
+    margin: 30px;
+    display: flex;
+}
+.slots{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    height: 100%;
+    width: 118px;
+}
+.bill-box{
+    margin-left: 60px;
+    flex-direction: column;
+}
+#chosen-slots-box{
+    margin-top: 40px;
+    height: 200px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 53px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.288);
+    background-color: white;
+    overflow: auto;
+}
+#chosen-slots-box:hover{
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.288);
+}
+#chosen-slots-box::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+}
+#chosen-slots-box::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+#chosen-slots-box::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 15px;
+}
+.bill-text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: gray;
+    margin-left: 20px;
+    font-size: large;
+}
+th{
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+table, td, th{
+    width: 100px;
+    height: 35px;
+    /* text-align: center; */
+}
+table{
+    font-family: "Montserrat";
+    font-size: large;
+    width: 340px;
+}
+.numbers{
+    text-align: right;
+}
+.pay-button{
+    width: 150px;
+    height: 65px;
+    border-radius: 35px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.452);
+    background-color: #79FF9C;
+    color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.288);
+    font-size: 25px;
+}
+.pay-button:hover{
+    cursor: pointer;
+    background-color: #32a04f;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.288);
+}
+.bill-text-left{
+    text-align: left;
+    width: 200px;
+    font-size: medium;
+}
+.numbers{
+    font-size: medium;
+}
+
+@media(max-width: 1400px){
+    #container{
+        flex-direction: column;
+    }
+    #chosen-slots-box{
+        width: 500px;
+    }
+    .bill-box{
+        margin:auto;
+        flex-direction: row;
+    }
+    #container{
+        margin: 10px;
+    }
+    .timeslot-box{
+        width: 920px;
+        height: 50vh;
+    }
+
+}
+@media(max-width: 975px) {
+    .timeslot-box{
+        width: 95vw;
+    }
+    .bill-box{
+        flex-direction: column;
+    }
+}
+@media(max-width: 680px){
+    .timeslot-box::-webkit-scrollbar{
+        height: 0px;
+        width: 0px;
+    }
+}
+@media (max-width: 535px) {
+    #chosen-slots-box{
+        width: 85vw;
+    }
+    #chosen-slots-box::-webkit-scrollbar{
+        height: 0px;
+        width: 0px;
+    }
+    .slot-box::-webkit-scrollbar{
+        width: 0px;
+        height: 0px;
+    }
+}

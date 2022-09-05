@@ -1,0 +1,566 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.background{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    background: url("../images/bg7.jpg");
+    background-size: cover;
+}
+.title-tab{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    background-color: #17008091;
+    box-shadow: 2px 2px 5px rgba(16, 0, 161, 0.808);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.title-tab:hover{
+    background-color: #100055c0;
+}
+.header-logo{
+    margin-top: 4px;
+    margin-left: 5px;
+    padding-right: 5px;
+    height: 65px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.253);
+    border-width: 0px;
+    border-right-width: 0.5px;
+    -webkit-tap-highlight-color: transparent;
+}
+.header-logo:hover{
+    cursor: pointer;
+}
+.header-title{
+    font-family: 'Segoe UI';
+    font-size: 25px;
+    margin-left: 15px;
+    color: white;
+}
+.options{
+    position: absolute;
+    right: 0%;
+    display: none;
+    margin: 5px;
+    border-radius: 5px;
+}
+.menu-buttons{
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    top: 80px;
+    left: 11px;
+    -webkit-tap-highlight-color: transparent;
+}
+.menu-button{
+    height: 45px;
+    width: 108px;
+    margin: 3px;
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: #1f1f1f;
+    font-weight: 700;
+    border-radius: 30px;
+    border-width: 0px;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.575);
+}
+.menu-button:hover{
+    background-color: rgb(201, 201, 201);
+    cursor: pointer;
+}
+.container{
+    position: relative;
+    top: 74px;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+}
+.clipart{
+    background: url("../images/image.png");
+    background-size: cover;
+    margin: auto;
+    height: 482px;
+    width: 568px;
+    filter: drop-shadow(2px 2px 5px #2222226c);
+}
+.image-container{
+    height: 113px;
+    width: 191px;
+    position: relative;
+    top: 74px;
+    left: 197px;
+}
+._image{
+    width: 100%;
+    height: 100%;
+}
+.book-button{
+    color: white;
+    height: 108px;
+    width: 250px;
+    border: none;
+    border-radius: 150px;
+    font-size: 35px;
+    background: rgb(0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    backdrop-filter: blur(4px);
+}
+.book-button:hover{
+    background-color: rgba(255, 255, 255, 0.603);
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 8px rgb(78, 78, 78);
+}
+#free-trial-text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.76);
+    text-align: center;
+    color: #00ff88;
+}
+#free-trial-text:hover{
+    cursor: pointer;
+}
+.adminLoginTxt{
+    margin-bottom: 20px;
+    color:#00ff88;
+}
+.adminLoginTxt:hover{
+    cursor: pointer;
+}
+.login-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-button{
+    margin: 10px;
+    height: 50px;
+    width: 130px;
+    border: none;
+    font-size: large;
+    border-radius: 10px;
+    color: white;
+    background-color: #2937ff;
+    box-shadow: 1px 1px 4px rgb(46 46 46 / 51%);
+    -webkit-tap-highlight-color: transparent;
+}
+.login-button:hover{
+    background-color: #000d80;
+    cursor: pointer;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+}
+input{
+    margin: 6px;
+    height: 35px;
+    width: 255px;
+    padding-left: 10px;
+    font-size: 17px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: #F0F5FD;
+}
+
+input:focus{
+    outline: 2px solid black;
+    background-color: #d7e7ff;
+}
+input::placeholder{
+    color: #979797;
+}
+.phone-input{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 270px;
+    border-radius: 5px;
+    background-color: black; 
+    border: none;
+    margin: 0px;
+    background-color: #F0F5FD;
+}
+#phone{
+    height: 33px;
+    margin: 0px;
+    margin-top: 1px;
+    background-color: transparent;
+    border: none;
+    padding-left: 0px;
+    outline: none;
+}
+.phone-input:focus-within{
+    outline: 2px solid black;
+    background-color: #d7e7ff;
+}
+.view-password-button{
+    position: relative;
+    top: -43px;
+    left: 95px;
+    height: 0px;
+    width: 0px;
+}
+.country-code{
+    border-radius: 5px;
+    margin: 0px;
+    height: 35px;
+    width: 30px;
+    background-color: transparent;
+    font-size: 17px;
+    text-align: right;
+}
+#c-code{
+    border: none;
+    outline: none;
+}
+.country-code::placeholder{
+    color: black;
+}
+#signUpBtn{
+    padding: 10px;
+}
+#signUpBtn:hover{
+    cursor: pointer;
+}
+#forgot-password-text{
+    color: rgb(255, 78, 78);
+    padding: 10px;
+}
+#forgot-password-text:hover{
+    cursor: pointer;
+}
+
+.book-now-container{
+    margin:auto;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-form{
+    margin:auto;
+    padding: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow: -3px -3px 8px rgb(0, 0, 0, 0.16);
+}
+.gallary-container{
+    display: flex;
+    margin: 0px;
+    height: 100vh;
+    width: 98vw;
+    /* background-color: transparent; */
+    /* justify-content: center; */
+}
+.gallary-image-container{
+    position: relative;
+    top: 60px;
+    width: 45vw;
+    margin: auto;
+    justify-content: center;
+}
+#gallary-image{
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.404);
+}
+#left-button{
+    position: absolute;
+    top: 50%;
+    opacity: 0.5;
+    filter: drop-shadow(1px 1px 2px black);
+}
+#left-button:hover{
+    height: 55px;
+    width: 55px;
+    opacity: 1;
+    filter: drop-shadow(2px 2px 5px black);
+}
+#right-button{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    opacity: 0.5;
+    filter: drop-shadow(2px 2px 5px black);
+}
+#right-button:hover{
+    height: 55px;
+    width: 55px;
+    opacity: 1;
+    filter: drop-shadow(2px 2px 5px black);
+}
+.contact-info{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    background-color: #00063a;
+    margin: auto;
+}
+.about-us-text{
+    margin-top: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: large;
+}
+.cred-box{
+    display: flex;
+    margin: 20px;
+    width: 97vw;
+}
+.cred{
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+.cred-logo{
+    height: 8vw;
+    width: 8vw;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.cred-text{
+    height: 9vw;
+    width: 10vw;
+}
+.cred-temp{
+    display: flex;
+    margin: auto;
+}
+#cred-temp-one{
+    width: 36vw;
+}
+#cred-temp-two{
+    width: 25vw;
+}
+.link{
+    color: white;
+    text-decoration: none;
+}
+.link:hover{
+    color: red;
+    cursor: pointer;
+}
+.image-description{
+    position: relative;
+    top: 60px;
+    padding: 10px;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.24);
+    flex-direction: column;
+    justify-content: center;
+}
+.video-play-container{
+    position: relative;
+    top: 60px;
+    margin: auto;
+}
+video{
+    width: 60vw;
+    height: 35vw;
+    margin: 20px;
+}
+.video-description{
+    margin: auto;
+}
+.pdf-viewer{
+    position: relative;
+    top: 60px;
+    display: flex;
+    margin: auto;
+}
+.pdf-viewer-box{
+    height: 60vh;
+    width: 60vw;
+    
+}
+.contact-div{
+    margin: auto;
+}
+@media(max-width: 680px) {
+    .background{
+        height: 100vh;
+    }
+    .menu-buttons{
+        display: none;
+        flex-direction: column;
+        left: calc(100vw - 114px);
+    }
+    .header-title{
+        font-size: 20px;
+    }
+    .options{
+        display: block;
+    }
+    .container{
+        display: flex;
+        height: 160vh;
+        width: 100vw;
+        flex-direction: column;
+        min-height: 900px;
+    }
+    .book-now-container{
+        height: 40vh;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+    .gallary-container{
+        flex-direction: column;
+    }
+    .gallary-image-container{
+        margin-top: 100px;
+        width: 95vw;
+    }
+    #left-button{
+        top: 40%;
+    }
+    #right-button{
+        top: 40%;
+    }
+    video{
+        width: 95vw;
+        margin: 0px;
+        height: auto;
+    }
+    .pdf-viewer-box{
+        height: 40vh;
+        width: 100vw;
+    }
+    #box-four{
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0px;
+    }
+    .cred-box{
+        flex-direction: column;
+        margin: 5px;
+    }
+    .about-us-text{
+        padding: 10px;
+        margin: 5px;
+        margin-top: 100px;
+        font-size: medium;
+    }
+    .cred-temp{
+        font-size: small;
+    }
+    #cred-temp-one{
+        width: 99vw;
+        height: 20vh;
+    }
+    #cred-temp-two{
+        width: 99vw;
+        height: 26vh;
+    }
+    .cred-text{
+        width: 27vw;
+    }
+    .cred{
+        height: 20vh;
+        padding: 0px;
+    }
+    .cred-logo{
+        width: 12vw;
+        height: 8vh;
+        margin-bottom: 5px;
+    }
+    .gallary-container{
+        justify-content: flex-start;
+    }
+    .contact-div{
+        margin-left: 50px;
+    }
+    .image-description{
+        width: 350px;
+    }
+    #social-links{
+        display: flex;
+        font-size: 0px;
+    }
+    .social{
+        width: 35px;
+        height: 35px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .skype{
+        width: 27px;
+        height: 35px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+@media(max-width: 1372px) {
+    .clipart{
+        display: none;
+    }
+    .image-container{
+        height: 0px;
+        width: 0px;
+    }
+}
+@media(max-height: 527px){
+    .container{
+        height: 527px;
+    }
+    .about-us-text{
+        margin-bottom: 0px;
+    }
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.473);
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
